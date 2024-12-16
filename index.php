@@ -11,13 +11,12 @@ require_once('conn.php');
 <body>
     <h1>Strona Główna</h1>
     <nav>
-        <ul>
-            <li><a href="games/index.php">Lista Gier</a></li>
-            <li><a href="developers/index.php">Lista Producentów</a></li>
-            <li><a href="publishers/index.php">Lista Wydawców</a></li>
-            <li><a href="tags/index.php">Lista Tagów</a></li>
-            <li><a href="platform/index.php">Lista Platform</a></li>
-        </ul>
+        <a href="games/index.php">Lista Gier</a>
+        <a href="developers/index.php">Lista Producentów</a>
+        <a href="publishers/index.php">Lista Wydawców</a>
+        <a href="tags/index.php">Lista Tagów</a>
+        <a href="platform/index.php">Lista Platform</a>
     </nav>
+    <div style="margin-top:78vh"></div>
 </body>
 </html>

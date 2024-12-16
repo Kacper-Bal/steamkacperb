@@ -27,8 +27,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         </head>
 
         <body>
-            <h1><?php echo htmlspecialchars($record['name']); ?></h1>
-            <p><?php echo ('<img src="' . $record['logo_url'] . '">'); ?></p>
+            <h1><?php echo ('<img src="' . $record['logo_url'] . '" style="width: 10vh;">'.$record['name'] ); ?></h1>
             <p><b>Gry: </b></p>
             <?php
                 while($row = $result2->fetch_assoc()){

@@ -38,9 +38,14 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
         <body>
             <h1><?php echo htmlspecialchars($record['title']); ?></h1>
+            <div class="container">
+            <div class="left">
+            </div>  
+
+            <div class="right">
+            <p><b>Description:</b> <?php echo htmlspecialchars($record['desctription']); ?></p>
             <p><b>Developer:</b> <?php echo ('<a href="../developers/show.php?id=' . $record['id_d'] . '">' . $record['developer'] . '</a>'); ?></p>
             <p><b>Publisher:</b> <?php echo ('<a href="../publishers/show.php?id=' . $record['id_p'] . '">' . $record['publisher'] . '</a>'); ?></p>
-            <p><b>Description:</b> <?php echo htmlspecialchars($record['desctription']); ?></p>
             <p><b>Platforms:</b>
                 <?php
                 while($row = $result_p->fetch_assoc()){
@@ -53,8 +58,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                     echo('<a href="../tags/show.php?id=' . $row['id_t'] . '">' . $row['tag_name'] . '</a> ');
                 }
             ?></p>
-
-            <footer><a href="index.php">Wróć do listy gier</a></footer>
+            </div>
+        </div>
+        
+        <footer><a href="index.php">Wróć do listy gier</a></footer>
         </body>
 
         </html>

@@ -9,13 +9,13 @@ $result = $conn->query($query);
 
 if ($result->num_rows > 0) {
     echo '<h1>PLATFORMY</h1>';
-    echo '<ul>';
+    echo '<div class="glowny">';
     
     while ($row = $result->fetch_assoc()) {
-        echo '<li><a href="show.php?id=' . $row['id'] . '">' . $row['name'] . " " . $row['version'] . '</a></li>';
+         echo '<div class="element"><a style="font-size: 25px" href="show.php?id=' . $row['id'] . '">' . $row['name'] .' ' . $row['version']. '</a>' . '</div>';
     }
 
-    echo '</ul>';
+    echo '</div>';
 } else {
     echo '<p>Brak gier w bazie danych.</p>';
 }

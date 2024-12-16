@@ -4,9 +4,10 @@
 
 body{
     margin: 0;
-    display: flex;
-    flex-direction: column;
     background: linear-gradient(180deg, #2A475E 0%, #1B2838 80%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1{
@@ -21,6 +22,28 @@ h1{
     margin: 0;
 }
 
+nav{
+    border-top: 2px solid white;
+    background: #171d25;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    transition: color 0.25s;
+    color: white;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+}
+
 footer{
     position: fixed;
     display: flex;
@@ -32,13 +55,40 @@ footer{
     width: 100%;
     border-top: 2px solid #171a21;
     color: #171a21;
+    background: linear-gradient(180deg, #2A475E 0%, #1B2838 80%);
+    z-index: 20;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+.glowny{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+}
+
+.element{
+    width: 100%;
+    border: 1px solid white;
+    height: 12vh;
+    margin: 0.5vw;
+    background: #202d39;
+    padding: 0.5vh;
+}
+
+.element p{
+    color: #5e6d7c;
+    margin: 0;
+    transition: color 0.25s;
 }
  
+.element:hover{
+    background: linear-gradient(180deg, #c6e6f8 5%, #95bcd3 95%);
+}
+
+.element:hover > a {
+    color: #202d39;
+}
+
 ::-webkit-scrollbar {
     height: 12px;
     width: 14px;
@@ -60,4 +110,23 @@ a{
 
   ::-webkit-scrollbar-corner {
     background: #202020;
+}
+
+.container{
+    width: 1000px;
+    height: 76vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    width: 55%;
+    background-color: grey;
+    height: 50vh;
+}
+
+.right{
+    margin-left: 5%;
+    width: 40%;
+    color: white;
 }
