@@ -3,7 +3,9 @@ require_once '../conn.php';
 
 echo '<title>Lista Producentów</title>';
 
-$query = "SELECT `id`, `name` FROM developers";
+$query = "SELECT developers.`id`, `name`, GROUP_CONCAT(game.`title` SEPARATOR ', ') AS `games` 
+FROM developers LEFT JOIN game ON game.developers_id = developers.id 
+GROUP BY developers.`id` ORDER BY developers.`id`";
 
 $result = $conn->query($query);
 
@@ -12,7 +14,7 @@ if ($result->num_rows > 0) {
     echo '<div class="glowny">';
     
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="element"><a style="font-size: 25px" href="show.php?id=' . $row['id'] . '">' . $row['name'] . '</a>' . '</div>';
+        echo '<div class="element"><a style="font-size: 25px" href="show.php?id=' . $row['id'] . '">' . $row['name'] . '</a><p>' . $row['games'] . '</p></div>';
     }
 
     echo '</div>';
