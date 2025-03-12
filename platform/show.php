@@ -30,12 +30,13 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
             <h1><?php echo htmlspecialchars($record['name'] . " " . $record['version']); ?></h1>
             <p><b>Owner: </b><?php echo htmlspecialchars($record['company_owner']); ?></p>
             <p><b>Games: </b></p>
+            <div id="lista">
             <?php
                 while($row = $result2->fetch_assoc()){
                     echo('<p><a href="../games/show.php?id=' . $row['id_g'] . '">' . $row['title'] . '</a></p>');
                 }
             ?>  
-
+            </div>
             <footer><a href="index.php">Wróć do listy platform</a></footer>
         </body>
 
