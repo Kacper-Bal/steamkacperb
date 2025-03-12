@@ -16,6 +16,7 @@ require_once('conn.php');
         <a href="publishers/index.php">Lista Wydawców</a>
         <a href="tags/index.php">Lista Tagów</a>
         <a href="platform/index.php">Lista Platform</a>
+        <a href="search.php">Wyszukiwarka</a>
     </nav>
     <div style="margin-top:78vh"></div>
 </body>
