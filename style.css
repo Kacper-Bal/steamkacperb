@@ -44,6 +44,7 @@ nav a{
     width: 12vw;
 }
 
+
 footer{
     position: fixed;
     display: flex;
@@ -70,7 +71,7 @@ footer{
     width: 100%;
     border: 1px solid white;
     height: 12vh;
-    margin: 0.5vw;
+    margin-top: 0.5vw;
     background: #202d39;
     padding: 0.5vh;
 }
@@ -79,6 +80,7 @@ footer{
     color: #5e6d7c;
     margin: 0;
     transition: color 0.25s;
+    font-size: 18px;
 }
  
 .element:hover{
@@ -128,5 +130,39 @@ footer{
 .right{
     margin-left: 5%;
     width: 40%;
+    color: white;
+}
+
+#search_bar{
+    height: 8vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    width: 1000px;
+    padding: 20px;
+    margin-top: 1vh;
+}
+
+.button{
+    background: rgba(103, 193, 245, 0.2);
+    color: #67c1f5;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0px rgba(103, 193, 245, 0.15);
+    font-size: 20px;
+    margin-top: 2vh;
+    height: 6vh;
+}
+
+#tak{
+    width: 1000px;
+    height: 8vh;
+    margin-top: 0.5vw;
+    background: #202d39;
+    padding-left: 1vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
     color: white;
 }
