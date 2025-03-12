@@ -28,19 +28,20 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         <body>
             <h1><?php echo htmlspecialchars($record['email']); ?></h1>
             <p><b>Gry: </b></p>
+            <div id="lista">
             <?php
                 while($row = $result2->fetch_assoc()){
                     echo('<p><a href="../games/show.php?id=' . $row['id_g'] . '">' . $row['title'] . '</a></p>');
                 }
             ?>
-
+            </div>
             <footer><a href="../index.php">Wróć do strony głównej</a></footer>
         </body>
 
         </html>
         <?php
     } else {
-        echo "<p>Użytkownik o podanym ID nie został znaleziona</p>";
+        echo "<p>Użytkownik o podanym ID nie został znalezionu</p>";
     }
 } else {
     echo "<p>Nieprawidłowe ID Użytkownika</p>";
