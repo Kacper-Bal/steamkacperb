@@ -29,12 +29,13 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         <body>
             <h1><?php echo ('<img src="' . $record['logo_url'] . '" style="width: 10vh;">'.$record['name'] ); ?></h1>
             <p><b>Gry: </b></p>
+            <div id="lista">
             <?php
                 while($row = $result2->fetch_assoc()){
                     echo('<p><a href="../games/show.php?id=' . $row['id_g'] . '">' . $row['title'] . '</a></p>');
                 }
             ?>
-
+            </div>
             <footer><a href="index.php">Wróć do listy producentów</a></footer>
         </body>
 
