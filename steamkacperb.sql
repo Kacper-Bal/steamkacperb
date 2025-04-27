@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2024 at 06:30 PM
--- Wersja serwera: 10.4.32-MariaDB
--- Wersja PHP: 8.2.12
+-- Generation Time: Apr 14, 2025 at 09:26 AM
+-- Wersja serwera: 10.4.28-MariaDB
+-- Wersja PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `steamkacperb`
 --
-CREATE DATABASE IF NOT EXISTS `steamkacperb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `steamkacperb`;
 
 -- --------------------------------------------------------
 
@@ -87,12 +85,12 @@ INSERT INTO `game` (`id`, `title`, `desctription`, `developers_id`, `publishers_
 (4, 'Cyberpunk 2077', 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.', 2, 2),
 (5, 'Elden Ring', 'THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.', 4, 4),
 (6, 'Baldurs Gate 3', 'Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.', 5, 5),
-(7, 'Black Myth: Wukong', 'Black Myth: Wukong is an action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.', 6, 6),
+(7, 'Balck Myth: Wukong', 'Black Myth: Wukong is an action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.', 6, 6),
 (8, 'Sea of Thieves', 'Sea of Thieves is a smash-hit pirate adventure game, offering the quintessential pirate experience of plundering lost treasures, intense battles, vanquishing sea monsters and more. Dive in with this revised edition of the game, which includes access to digital bonus media.', 7, 7),
 (9, 'The Forest', 'As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants. Build, explore, survive in this terrifying first person survival horror simulator.', 8, 8),
 (10, 'Dead by Daylight', 'Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.', 9, 9),
 (11, 'God of War', 'His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.', 10, 10),
-(12, 'God of War Ragnarok', 'Kratos and Atreus embark on a mythic journey for answers before Ragnarök arrives – now on PC.', 10, 10),
+(12, 'God of War Ragnarol', 'Kratos and Atreus embark on a mythic journey for answers before Ragnarök arrives – now on PC.', 10, 10),
 (13, 'Drake Hollow', 'Build and defend villages of vegetable folk from deadly feral beasts in the blighted world of The Hollow. Explore, gather, and fight! You can even invite your friends. Can you craft the perfect village?', 19, 2),
 (14, 'GTA V', 'Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.', 11, 11),
 (15, 'The Last of Us Part 1', 'Discover the award-winning game that inspired the critically acclaimed television show. Guide Joel and Ellie through a post-apocalyptic America, and encounter unforgettable allies and enemies in The Last of Us™.', 12, 10),
@@ -626,19 +624,24 @@ INSERT INTO `tags_games` (`id`, `game_id`, `tag_id`) VALUES
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `email` varchar(255) DEFAULT NULL
+  `email` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `email`) VALUES
-(1, 'kacperb@example.com'),
-(2, 'jann@example.com'),
-(3, 'kamilk@example.com'),
-(4, 'maksyml@example.com'),
-(5, 'franekb@example.com');
+INSERT INTO `user` (`id`, `email`, `name`, `password`) VALUES
+(1, 'kacperb@example.com', 'kacperb', '12266ab3e984aacb7411b978acf589fd14948bbdaf0cebeaeffa0eedc164ce3a'),
+(2, 'jann@example.com', 'jann', '2242f7046fd384802f5b47cc937f68c818e79a25f894dbdc15e54d1f31a9f746'),
+(3, 'kamilk@example.com', 'kamilk', 'd12d9b7c07da8353be1c5b25d23d52c1ae95ea8d1e3efd47777f4184dcd079be'),
+(4, 'maksyml@example.com', 'maksyml', '0262417bce6ce7bd891dc2c3386484bd3903ecd7c298ec847f31dbd6abe83ad2'),
+(5, 'franekb@example.com', 'franekb', 'd39413f7dd518d56348c6aa627623d4339d12e4ef0a3c24dec366a5daf9913ab'),
+(10, 'oskara@example.com', 'oskara', '5b73f288840d7ffa21abfc39bacd19351f7d647ce1ec30aad88e0c03147350f3'),
+(11, 'oskara@example.com', 'oskara', '5b73f288840d7ffa21abfc39bacd19351f7d647ce1ec30aad88e0c03147350f3'),
+(15, '', '', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -762,7 +765,7 @@ ALTER TABLE `tags_games`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
