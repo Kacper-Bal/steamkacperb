@@ -644,6 +644,19 @@ INSERT INTO `user` (`id`, `email`, `name`, `password`) VALUES
 (15, '', '', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855');
 
 --
+-- Struktura tabeli dla tabeli `sessions`
+--
+
+CREATE TABLE `sessions` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `user_id` INT,
+    `session_key` VARCHAR(255),
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`user_id`) REFERENCES `user`(`id`)
+);
+
+
+--
 -- Indeksy dla zrzutów tabel
 --
 
