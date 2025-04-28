@@ -38,7 +38,7 @@ if(isset($_POST) && isset($_POST["username"]) && isset($_POST["mail"]) && isset(
     <div class="logowanie">
     <form method="POST" action="rejestracja.php">
         <input class="logowanie_input" type="text" name="username" placeholder="Nazwa użytkownika" required>
-        <input class="logowanie_input" type="email" name="email" placeholder="E-mail" required>
+        <input class="logowanie_input" type="mail" name="email" placeholder="E-mail" required>
         <input class="logowanie_input" type="password" name="password" placeholder="Hasło" required>
         <button class="logowanie_button" type="submit">Zarejestruj się</button>
     </form>
